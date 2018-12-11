@@ -43,10 +43,17 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
+<<<<<<< HEAD
                       <h4 class="card-title">Tambah Kelas Baru</h4>
                       
                         <div class="form-group{{ $errors->has('judul') ? ' has-error' : '' }}">
                             <label for="judul" class="col-md-4 control-label">Kelas</label>
+=======
+                      <h4 class="card-title">Tambah Kelas baru</h4>
+                      
+                        <div class="form-group{{ $errors->has('judul') ? ' has-error' : '' }}">
+                            <label for="judul" class="col-md-4 control-label">Nama Kelas</label>
+>>>>>>> 0e661f755d2a6b68438cab3d3d181e99a3555547
                             <div class="col-md-6">
                                 <input id="judul" type="text" class="form-control" name="judul" value="{{ old('judul') }}" required>
                                 @if ($errors->has('judul'))

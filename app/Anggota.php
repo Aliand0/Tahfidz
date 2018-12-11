@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Anggota extends Model
 {
 	protected $table = 'anggota';
-    protected $fillable = ['user_id', 'npm', 'nama', 'tempat_lahir', 'tgl_lahir', 'jk', 'prodi'];
+    protected $fillable = ['id', 'user_id','nis','nama', 'jk','kelas_id'];
 
 
     /**
-     * Method One To One 
+     * Method One To One
      */
     public function user()
     {
@@ -19,7 +19,7 @@ class Anggota extends Model
     }
 
     /**
-     * Method One To Many 
+     * Method One To Many
      */
     public function transaksi()
     {
