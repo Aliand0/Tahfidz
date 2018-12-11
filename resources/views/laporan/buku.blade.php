@@ -19,7 +19,7 @@
               <div class="card">
 
                 <div class="card-body">
-                  <h4 class="card-title">Laporan Buku</h4>
+                  <h4 class="card-title">Grafik</h4>
 
   <div class="col-md-2 pull-left">
     <a href="{{ url('laporan/buku/pdf') }}" class="btn btn-primary btn-rounded btn-fw"><b><i class="fa fa-download"></i> Export PDF</a></b>

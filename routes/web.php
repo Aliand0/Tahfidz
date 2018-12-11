@@ -29,6 +29,7 @@ Route::resource('user', 'UserController');
 
 Route::resource('anggota', 'AnggotaController');
 
+
 Route::resource('buku', 'BukuController');
 Route::get('/format_buku', 'BukuController@format');
 Route::post('/import_buku', 'BukuController@import');

@@ -36,11 +36,12 @@
             </a>
             <div class="collapse {{ setShow(['anggota*', 'buku*', 'user*']) }}" id="ui-basic">
               <ul class="nav flex-column sub-menu">
+                
                 <li class="nav-item">
-                  <a class="nav-link {{ setActive(['anggota*']) }}" href="{{route('anggota.index')}}">Data Anggota</a>
+                  <a class="nav-link {{ setActive(['anggota*']) }}" href="{{route('anggota.index')}}">Data Siswa</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {{ setActive(['buku*']) }}" href="{{route('buku.index')}}">Data Buku</a>
+                  <a class="nav-link {{ setActive(['buku*']) }}" href="{{route('buku.index')}}">Data Kelas</a>
                 </li>
                  <li class="nav-item">
                   <a class="nav-link {{ setActive(['user*']) }}" href="{{route('user.index')}}">Data User</a>
@@ -51,8 +52,8 @@
           @endif
           <li class="nav-item {{ setActive(['transaksi*']) }}">
             <a class="nav-link" href="{{route('transaksi.index')}}">
-              <i class="menu-icon mdi mdi-backup-restore"></i>
-              <span class="menu-title">Transaksi</span>
+              <i class="menu-icon mdi mdi-library"></i>
+              <span class="menu-title">Hafalan</span>
             </a>
           </li>
           <li class="nav-item">
@@ -64,7 +65,7 @@
             <div class="collapse" id="ui-laporan">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{url('laporan/trs')}}">Laporan Transaksi</a>
+                  <a class="nav-link" href="{{url('laporan/trs')}}">Laporan Hafalan</a>
                 </li>
                 <!--
                 <li class="nav-item">
@@ -72,7 +73,7 @@
                 </li>
                 -->
                  <li class="nav-item">
-                  <a class="nav-link" href="{{url('laporan/buku')}}">Laporan Buku</a>
+                  <a class="nav-link" href="{{url('laporan/buku')}}">Grafik</a>
                 </li>
               </ul>
             </div>

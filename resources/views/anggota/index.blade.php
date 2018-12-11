@@ -14,7 +14,7 @@
 <div class="row">
 
   <div class="col-lg-2">
-    <a href="{{ route('anggota.create') }}" class="btn btn-primary btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Anggota</a>
+    <a href="{{ route('anggota.create') }}" class="btn btn-primary btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Siswa</a>
   </div>
     <div class="col-lg-12">
                   @if (Session::has('message'))
@@ -27,7 +27,7 @@
               <div class="card">
 
                 <div class="card-body">
-                  <h4 class="card-title">Data Anggota</h4>
+                  <h4 class="card-title">Data Siswa</h4>
                   
                   <div class="table-responsive">
                     <table class="table table-striped" id="table">
@@ -37,10 +37,10 @@
                             Nama
                           </th>
                           <th>
-                            NPM
+                            NIS
                           </th>
                           <th>
-                            Prodi
+                            Kelas
                           </th>
                           <th>
                             Jenis Kelamin

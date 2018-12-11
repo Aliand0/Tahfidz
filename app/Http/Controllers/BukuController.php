@@ -112,7 +112,7 @@ class BukuController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|string|max:255',
-            'isbn' => 'required|string'
+            
         ]);
 
         if($request->file('cover')) {

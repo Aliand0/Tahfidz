@@ -5,8 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>TAHFIDZQU - LOGIN</title>
-
+  <title>TahfidzQu - Login</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="{{asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('vendors/iconfonts/puse-icons-feather/feather.css')}}">
@@ -26,11 +25,16 @@
 
         <div class="row w-100">
         <div class="col-md-12" style="margin-bottom: 20px;">
-        <h2 style="text-align: center;">TAHFIDZQU - LOGIN</h2>
+        <h2 style="text-align: center;"><b>TahfidzQu</b></h2>
+        <h4 style="text-align: center;">Aplikasi Tahfidz Al-Qur'an</h4>
+        <h4 style="text-align: center;">
+        <img src = "http://web.man2kudus.sch.id/wp-content/uploads/2017/08/cropped-logo-web-man.png">
+        <br><br>
+        </h4>
         </div>
         <div class="col-lg-4 mx-auto">
             <div class="auto-form-wrapper">
-
+          
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}"">
                   <label class="label">Username</label>
                   <div class="input-group">
@@ -64,10 +68,10 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary submit-btn btn-block" type="submit">Login</button>
+                  <button class="btn btn-primary submit-btn btn-block" type="submit">Masuk</button>
                 </div>
             </div>
-            <p class="footer-text text-center" style="margin-top: 20px;color: #308ee0">Copyright © {{date('Y')}} TahfidzQu.com - All rights reserved.</p>
+            <p class="footer-text text-center" style="margin-top: 20px;color: #308ee0">Copyright © {{date('Y')}} TahfidzQu - All rights reserved.</p>
           </div>
         </div>
       </div>

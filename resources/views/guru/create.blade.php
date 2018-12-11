@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 @section('content')
 
-<form method="POST" action="{{ route('anggota.store') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('guru.store') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
 <div class="row">
             <div class="col-md-12 d-flex align-items-stretch grid-margin">
@@ -21,7 +21,7 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Tambah Siswa</h4>
+                      <h4 class="card-title">Tambah Anggota baru</h4>
                       
                         <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
                             <label for="nama" class="col-md-4 control-label">Nama</label>
@@ -35,7 +35,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
-                            <label for="npm" class="col-md-4 control-label">NIS</label>
+                            <label for="npm" class="col-md-4 control-label">NPM</label>
                             <div class="col-md-6">
                                 <input id="npm" type="number" class="form-control" name="npm" value="{{ old('npm') }}" maxlength="8" required>
                                 @if ($errors->has('npm'))
@@ -45,9 +45,29 @@ $(document).ready(function() {
                                 @endif
                             </div>
                         </div>
-                        
+                        <div class="form-group{{ $errors->has('tempat_lahir') ? ' has-error' : '' }}">
+                            <label for="tempat_lahir" class="col-md-4 control-label">Tempat Lahir</label>
+                            <div class="col-md-6">
+                                <input id="tempat_lahir" type="text" class="form-control" name="tempat_lahir" value="{{ old('tempat_lahir') }}" required>
+                                @if ($errors->has('tempat_lahir'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('tempat_lahir') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
-                
+                        <div class="form-group{{ $errors->has('tgl_lahir') ? ' has-error' : '' }}">
+                            <label for="tgl_lahir" class="col-md-4 control-label">Tanggal Lahir</label>
+                            <div class="col-md-6">
+                                <input id="tgl_lahir" type="date" class="form-control" name="tgl_lahir" value="{{ old('tgl_lahir') }}" required>
+                                @if ($errors->has('tgl_lahir'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('tgl_lahir') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                             <label for="level" class="col-md-4 control-label">Jenis Kelamin</label>
@@ -60,7 +80,17 @@ $(document).ready(function() {
                             </div>
                         </div>
 
-            
+                        <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
+                            <label for="prodi" class="col-md-4 control-label">Prodi</label>
+                            <div class="col-md-6">
+                            <select class="form-control" name="prodi" required="">
+                                <option value=""></option>
+                                <option value="TI">Teknik Informatika</option>
+                                <option value="SI">Sistem Informasi</option>
+                                <option value="KM">Kesehatan Masyarakat</option>
+                            </select>
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }} " style="margin-bottom: 20px;">
                             <label for="user_id" class="col-md-4 control-label">User Login</label>
