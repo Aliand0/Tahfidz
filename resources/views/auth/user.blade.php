@@ -54,12 +54,7 @@
                       @foreach($datas as $data)
                         <tr>
                           <td class="py-1">
-                          @if($data->gambar)
-                            <img src="{{url('images/user', $data->gambar)}}" alt="image" style="margin-right: 10px;" />
-                          @else
-                            <img src="{{url('images/user/default.png')}}" alt="image" style="margin-right: 10px;" />
-
-                          @endif
+                         
 
 
                             {{$data->name}}

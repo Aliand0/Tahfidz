@@ -22,7 +22,7 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Edit Anggota</h4>
+                      <h4 class="card-title">Ubah Siswa</h4>
                       
                         <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
                             <label for="nama" class="col-md-4 control-label">Nama</label>
@@ -36,35 +36,12 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
-                            <label for="npm" class="col-md-4 control-label">NPM</label>
+                            <label for="npm" class="col-md-4 control-label">NIS</label>
                             <div class="col-md-6">
                                 <input id="npm" type="number" class="form-control" name="npm" value="{{ $data->npm }}" maxlength="8" required>
                                 @if ($errors->has('npm'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('npm') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('tempat_lahir') ? ' has-error' : '' }}">
-                            <label for="tempat_lahir" class="col-md-4 control-label">Tempat Lahir</label>
-                            <div class="col-md-6">
-                                <input id="tempat_lahir" type="text" class="form-control" name="tempat_lahir" value="{{ $data->tempat_lahir }}" required>
-                                @if ($errors->has('tempat_lahir'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('tempat_lahir') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('tgl_lahir') ? ' has-error' : '' }}">
-                            <label for="tgl_lahir" class="col-md-4 control-label">Tanggal Lahir</label>
-                            <div class="col-md-6">
-                                <input id="tgl_lahir" type="date" class="form-control" name="tgl_lahir" value="{{ $data->tgl_lahir }}" required>
-                                @if ($errors->has('tgl_lahir'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('tgl_lahir') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -82,7 +59,7 @@ $(document).ready(function() {
                         </div>
 
                         <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
-                            <label for="prodi" class="col-md-4 control-label">Prodi</label>
+                            <label for="prodi" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
                             <select class="form-control" name="prodi" required="">
                                 <option value=""></option>

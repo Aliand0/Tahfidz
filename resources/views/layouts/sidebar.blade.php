@@ -24,7 +24,7 @@
           <li class="nav-item {{ setActive(['/', 'home']) }}"> 
             <a class="nav-link" href="{{url('/')}}">
               <i class="menu-icon mdi mdi-television"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">Beranda</span>
             </a>
           </li>
           @if(Auth::user()->level == 'admin')

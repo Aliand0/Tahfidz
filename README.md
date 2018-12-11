@@ -1,4 +1,8 @@
-# perpus-laravel
-Cara menggunakan dan selengkapnya bisa kalian buka di website saya gilacoding.com
+TahfidzQu - Aplikasi Tahfidz Al-Qur'an
 
-Terimakasih!
+Pengembang Aplikasi :
+- Ali
+- Aji
+- Inggit
+- Norman
+

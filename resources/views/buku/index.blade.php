@@ -45,7 +45,7 @@
                             Kelas
                           </th>
                           <th>
-                            Tahun
+                            Tahun Pelajaran
                           </th>
                           <th>
                             Jumlah Siswa

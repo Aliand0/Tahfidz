@@ -46,9 +46,6 @@ $(document).ready(function() {
                             </div>
                         </div>
                         
-
-                
-
                         <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                             <label for="level" class="col-md-4 control-label">Jenis Kelamin</label>
                             <div class="col-md-6">
@@ -60,7 +57,17 @@ $(document).ready(function() {
                             </div>
                         </div>
 
-            
+                        <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
+                            <label for="prodi" class="col-md-4 control-label">Kelas</label>
+                            <div class="col-md-6">
+                            <select class="form-control" name="prodi" required="">
+                                <option value=""></option>
+                                <option value="TI">Teknik Informatika</option>
+                                <option value="SI">Sistem Informasi</option>
+                                <option value="KM">Kesehatan Masyarakat</option>
+                            </select>
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }} " style="margin-bottom: 20px;">
                             <label for="user_id" class="col-md-4 control-label">User Login</label>

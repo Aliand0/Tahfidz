@@ -49,10 +49,10 @@ var check = function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Edit user</h4>
+                      <h4 class="card-title">Ubah User</h4>
                       
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <label for="name" class="col-md-4 control-label">Nama</label>
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ $data->name }}" required autofocus>
                                 @if ($errors->has('name'))
@@ -99,7 +99,7 @@ var check = function() {
                             <div class="col-md-6">
                             <select class="form-control" name="level" required="">
                                 <option value="admin" @if($data->level == 'admin') selected @endif>Admin</option>
-                                <option value="guru" @if($data->level == 'guru') selected @endif>Guru</option>
+                    
                                 <option value="user" @if($data->level == 'user') selected @endif>User</option>
                             </select>
                             </div>

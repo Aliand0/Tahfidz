@@ -44,7 +44,7 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Edit Kelas <b>{{$data->judul}}</b> </h4>
+                      <h4 class="card-title">Ubah Kelas <b>{{$data->judul}}</b> </h4>
                       <form class="forms-sample">
                         <div class="form-group{{ $errors->has('judul') ? ' has-error' : '' }}">
                             <label for="judul" class="col-md-4 control-label">Kelas</label>

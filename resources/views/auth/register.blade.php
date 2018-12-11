@@ -51,7 +51,7 @@ var check = function() {
                       <h4 class="card-title">Tambah user baru</h4>
                       
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <label for="name" class="col-md-4 control-label">Nama</label>
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
                                 @if ($errors->has('name'))
@@ -85,22 +85,13 @@ var check = function() {
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email" class="col-md-4 control-label">Gambar</label>
-                            <div class="col-md-6">
-                                <img class="product" width="200" height="200" />
-                                <input type="file" class="uploads form-control" style="margin-top: 20px;" name="gambar">
-                            </div>
-                        </div>
-
-
                         <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                             <label for="level" class="col-md-4 control-label">Level</label>
                             <div class="col-md-6">
                             <select class="form-control" name="level" required="">
                                 <option value=""></option>
                                 <option value="admin">Admin</option>
-                                <option value="guru">Guru</option>
+                                
                                 <option value="user">User</option>
                             </select>
                             </div>
