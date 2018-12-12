@@ -23,7 +23,7 @@ $(document).ready(function() {
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Ubah Siswa</h4>
-                      
+
                         <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
                             <label for="nama" class="col-md-4 control-label">Nama</label>
                             <div class="col-md-6">
@@ -38,10 +38,10 @@ $(document).ready(function() {
                         <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
                             <label for="npm" class="col-md-4 control-label">NIS</label>
                             <div class="col-md-6">
-                                <input id="npm" type="number" class="form-control" name="npm" value="{{ $data->npm }}" maxlength="8" required>
-                                @if ($errors->has('npm'))
+                                <input id="nis" type="number" class="form-control" name="nis" value="{{ $data->nis }}" maxlength="8" required>
+                                @if ($errors->has('nis'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('npm') }}</strong>
+                                        <strong>{{ $errors->first('nis') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -58,15 +58,15 @@ $(document).ready(function() {
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
-                            <label for="prodi" class="col-md-4 control-label">Kelas</label>
+                        <div class="form-group{{ $errors->has('kelas_id') ? ' has-error' : '' }}">
+                            <label for="kelas_id" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
-                            <select class="form-control" name="prodi" required="">
-                                <option value=""></option>
-                                <option value="TI" {{$data->prodi === "TI" ? "selected" : ""}} >Teknik Informatika</option>
-                                <option value="SI" {{$data->prodi === "SI" ? "selected" : ""}} >Sistem Informasi</option>
-                                <option value="KM" {{$data->prodi === "KM" ? "selected" : ""}} >Kesehatan Masyarakat</option>
-                            </select>
+                              <select class="form-control" name="user_id" required="">
+                                  <option value="">(Cari User)</option>
+                                  @foreach($kelas as $kls)
+                                      <option value="{{$kls->id}}" {{$kls->id === $kls->id ? "selected" : ""}}>{{$kls->kelas}} {{$kls->tahun}}</option>
+                                  @endforeach
+                              </select>
                             </div>
                         </div>
 

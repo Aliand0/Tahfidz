@@ -34,8 +34,8 @@ $(document).ready(function() {
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
-                            <label for="npm" class="col-md-4 control-label">NIS</label>
+                        <div class="form-group{{ $errors->has('nim') ? ' has-error' : '' }}">
+                            <label for="nim" class="col-md-4 control-label">NIS</label>
                             <div class="col-md-6">
                                 <input id="nis" type="number" class="form-control" name="nis" value="{{ old('nis') }}" maxlength="8" required>
                                 @if ($errors->has('nis'))
@@ -60,7 +60,7 @@ $(document).ready(function() {
                         <div class="form-group">
                             <label for="prodi" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
-                            <select class="form-control" name="kelas" required="">
+                            <select class="form-control" name="kelas_id" required="">
                                 @foreach($kelas as $kls)
                                 <option value="{{$kls->id}}">{{$kls->kelas}} {{$kls->tahun}}</option>
                                 @endforeach
