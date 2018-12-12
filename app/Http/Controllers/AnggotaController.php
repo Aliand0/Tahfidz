@@ -121,9 +121,13 @@ class AnggotaController extends Controller
         }
 
         $data = Anggota::findOrFail($id);
+<<<<<<< HEAD
         
+=======
+     
+>>>>>>> 85c390364c4e7e3490a34f65e320d0f7e67a7ae7
         $users = User::get();
-        return view('anggota.edit', compact('data', 'data1','users', 'kelas'));
+        return view('anggota.edit', compact('data','users', 'kelas'));
     }
 
     /**
