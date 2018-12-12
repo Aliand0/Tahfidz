@@ -76,11 +76,12 @@ class AnggotaController extends Controller
 
         $this->validate($request, [
             'nama' => 'required|string|max:255',
-            'nis' => 'required|string|max:20|unique:anggota'
-
+            'nis' => 'required|string|max:20|unique:anggota',
+            'jk' => 'required',
+            'kelas_id' => 'required',
         ]);
 
-        siswa::create($request->all());
+        Anggota::create($request->all());
 
         alert()->success('Berhasil.','Data telah ditambahkan!');
         return redirect()->route('anggota.index');

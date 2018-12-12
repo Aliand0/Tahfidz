@@ -62,22 +62,12 @@ $(document).ready(function() {
                             <div class="col-md-6">
                             <select class="form-control" name="kelas" required="">
                                 @foreach($kelas as $kls)
-                                <option value="{{$kls->id}}">{{$kls->kelas}}</option>
+                                <option value="{{$kls->id}}">{{$kls->kelas}} {{$kls->tahun}}</option>
                                 @endforeach
                             </select>
                             </div>
                         </div>
 
-                        @foreach($kelas as $kls)
-                        <div class="form-group">
-                            <label for="tahun" class="col-md-4 control-label">Tahun Angkatan</label>
-                            <div class="col-md-6">
-                            <select class="form-control" name="prodi" required="">
-                                <option value="{{$kls->id}}">{{$kls->tahun}}</option>
-                            </select>
-                            </div>
-                        </div>
-                        @endforeach
                         <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }} " style="margin-bottom: 20px;">
                             <label for="user_id" class="col-md-4 control-label">User Login</label>
                             <div class="col-md-6">

@@ -54,8 +54,6 @@
                       @foreach($datas as $data)
                         <tr>
                           <td class="py-1">
-
-
                             {{$data->nama}}
                           </td>
                           <td>
