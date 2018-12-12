@@ -80,7 +80,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submit">
-                                    Submit
+                                    Tambah
                         </button>
                         <button type="reset" class="btn btn-danger">
                                     Reset

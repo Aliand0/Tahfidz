@@ -14,7 +14,7 @@
 <div class="row">
 
   <div class="col-lg-2">
-    <a href="{{ route('kelas.create') }}" class="btn btn-primary btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Siswa</a>
+    <a href="{{ route('kelas.create') }}" class="btn btn-primary btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Kelas</a>
   </div>
     <div class="col-lg-12">
                   @if (Session::has('message'))
@@ -51,7 +51,7 @@
                             {{$data->kelas}}
                           </td>
                           <td>
-                          <a href="{{route('kelas.show', $data->id)}}">
+                         
                             {{$data->tahun}}
                           </a>
                           </td>

@@ -22,7 +22,7 @@ $(document).ready(function() {
                       <h4 class="card-title">Tambah Kelas</h4>
 
                         <div class="form-group{{ $errors->has('kelas') ? ' has-error' : '' }}">
-                            <label for="kelas" class="col-md-4 control-label">kelas</label>
+                            <label for="kelas" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
                                 <input id="kelas" type="text" class="form-control" name="kelas" value="{{ old('kelas') }}" required>
                                 @if ($errors->has('kelas'))
@@ -33,7 +33,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('tahun') ? ' has-error' : '' }}">
-                            <label for="tahun" class="col-md-4 control-label">tahun</label>
+                            <label for="tahun" class="col-md-4 control-label">Tahun</label>
                             <div class="col-md-6">
                                 <input id="tahun" type="number" class="form-control" name="tahun" value="{{ old('tahun') }}" maxlength="8" required>
                                 @if ($errors->has('tahun'))
@@ -44,7 +44,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submit">
-                                    Submit
+                                    Tambah
                         </button>
                         <button type="reset" class="btn btn-danger">
                                     Reset
