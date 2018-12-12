@@ -28,12 +28,8 @@ Route::get('/user-edit/{id}', 'UserController@edit');
 Route::resource('user', 'UserController');
 Route::resource('anggota', 'AnggotaController');
 Route::resource('hafalan', 'HafalanController');
+Route::resource('kelas', 'KelasController');
 
-Route::resource('buku', 'BukuController');
-Route::get('/format_buku', 'BukuController@format');
-Route::post('/import_buku', 'BukuController@import');
-
-Route::resource('transaksi', 'TransaksiController');
 Route::get('/laporan/trs', 'LaporanController@transaksi');
 Route::get('/laporan/trs/pdf', 'LaporanController@transaksiPdf');
 Route::get('/laporan/trs/excel', 'LaporanController@transaksiExcel');
