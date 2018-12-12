@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 @section('content')
 
-<form method="POST" action="{{ route('anggota.store') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('kelas.store') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
 <div class="row">
             <div class="col-md-12 d-flex align-items-stretch grid-margin">
@@ -51,7 +51,7 @@ $(document).ready(function() {
                         <button type="reset" class="btn btn-danger">
                                     Reset
                         </button>
-                        <a href="{{route('anggota.index')}}" class="btn btn-light pull-right">Back</a>
+                        <a href="{{route('kelas.index')}}" class="btn btn-light pull-right">Back</a>
                     </div>
                   </div>
                 </div>
