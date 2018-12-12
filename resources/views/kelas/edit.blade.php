@@ -7,35 +7,13 @@ $(document).ready(function() {
 });
 
 </script>
-
-<script type="text/javascript">
-        function readURL() {
-            var input = this;
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $(input).prev().attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        $(function () {
-            $(".uploads").change(readURL)
-            $("#f").submit(function(){
-                // do ajax submit or just classic form submit
-              //  alert("fake subminting")
-                return false
-            })
-        })
-        </script>
 @stop
 
 @extends('layouts.app')
 
 @section('content')
 
-<form action="{{ route('buku.update', $data->id) }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('kelas.update', $data->id) }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         {{ method_field('put') }}
 <div class="row">
@@ -44,47 +22,37 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Ubah Kelas <b>{{$data->judul}}</b> </h4>
-                      <form class="forms-sample">
-                        <div class="form-group{{ $errors->has('judul') ? ' has-error' : '' }}">
-                            <label for="judul" class="col-md-4 control-label">Kelas</label>
+                      <h4 class="card-title">Ubah Kelas</h4>
+
+                        <div class="form-group{{ $errors->has('kelas') ? ' has-error' : '' }}">
+                            <label for="kelas" class="col-md-4 control-label">kelas</label>
                             <div class="col-md-6">
-                                <input id="judul" type="text" class="form-control" name="judul" value="{{ $data->judul }}" required>
-                                @if ($errors->has('judul'))
+                                <input id="kelas" type="text" class="form-control" name="kelas" value="{{ $data->kelas }}" required>
+                                @if ($errors->has('kelas'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('judul') }}</strong>
+                                        <strong>{{ $errors->first('kelas') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-                        
-                        <div class="form-group{{ $errors->has('tahun_terbit') ? ' has-error' : '' }}">
-                            <label for="tahun_terbit" class="col-md-4 control-label">Tahun Pelajaran</label>
+                        <div class="form-group{{ $errors->has('tahun') ? ' has-error' : '' }}">
+                            <label for="tahun" class="col-md-4 control-label">tahun</label>
                             <div class="col-md-6">
-                                <input id="tahun_terbit" type="number" maxlength="4" class="form-control" name="tahun_terbit" value="{{ $data->tahun_terbit }}" required>
-                                @if ($errors->has('tahun_terbit'))
+                                <input id="tahun" type="number" class="form-control" name="tahun" value="{{ $data->tahun }}" maxlength="8" required>
+                                @if ($errors->has('tahun'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('tahun_terbit') }}</strong>
+                                        <strong>{{ $errors->first('tahun') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('jumlah_buku') ? ' has-error' : '' }}">
-                            <label for="jumlah_buku" class="col-md-4 control-label">Jumlah Siswa</label>
-                            <div class="col-md-6">
-                                <input id="jumlah_buku" type="number" maxlength="4" class="form-control" name="jumlah_buku" value="{{ $data->jumlah_buku }}" required>
-                                @if ($errors->has('jumlah_buku'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('jumlah_buku') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        
                         <button type="submit" class="btn btn-primary" id="submit">
-                                    Update
+                                    Ubah
                         </button>
-                        <a href="{{route('buku.index')}}" class="btn btn-light pull-right">Back</a>
+                        <button type="reset" class="btn btn-danger">
+                                    Reset
+                        </button>
+                        <a href="{{route('kelas.index')}}" class="btn btn-light pull-right">Back</a>
                     </div>
                   </div>
                 </div>
