@@ -28,7 +28,7 @@
 
                 <div class="card-body">
                   <h4 class="card-title">Data Siswa</h4>
-                  
+
                   <div class="table-responsive">
                     <table class="table table-striped" id="table">
                       <thead>
@@ -54,23 +54,23 @@
                       @foreach($datas as $data)
                         <tr>
                           <td class="py-1">
-                          
+
 
                             {{$data->nama}}
                           </td>
                           <td>
-                          <a href="{{route('anggota.show', $data->id)}}"> 
-                            {{$data->npm}}
+                          <a href="{{route('anggota.show', $data->id)}}">
+                            {{$data->nis}}
                           </a>
                           </td>
 
                           <td>
-                          @if($data->prodi == 'TI')
-                            Teknik Informatika
-                          @elseif($data->prodi == 'SI')
-                            Sistem Informasi
+                          @if($data->kelas_id == 1)
+                            10 Mipa 1
+                          @elseif($data->prodi == 2)
+                            10 Mipa 2
                           @else
-                            Kesehatan Masyarakat
+                            10 Mipa 3
                           @endif
                           </td>
                           <td>
@@ -81,6 +81,7 @@
                           <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Action
                           </button>
+
                           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
                             <a class="dropdown-item" href="{{route('anggota.edit', $data->id)}}"> Edit </a>
                             <form action="{{ route('anggota.destroy', $data->id) }}" class="pull-left"  method="post">
@@ -89,7 +90,7 @@
                             <button class="dropdown-item" onclick="return confirm('Anda yakin ingin menghapus data ini?')"> Delete
                             </button>
                           </form>
-                           
+
                           </div>
                         </div>
                           </td>

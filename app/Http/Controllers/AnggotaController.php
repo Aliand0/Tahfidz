@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\kelas;
 use App\Anggota;
 use Carbon\Carbon;
 use Session;
@@ -75,7 +76,8 @@ class AnggotaController extends Controller
 
         $this->validate($request, [
             'nama' => 'required|string|max:255',
-            'npm' => 'required|string|max:20|unique:anggota'
+            'nis' => 'required|string|max:20|unique:anggota'
+
         ]);
 
         siswa::create($request->all());

@@ -56,16 +56,18 @@ $(document).ready(function() {
                             </select>
                             </div>
                         </div>
-                        @foreach($kelas as $kls)
+
                         <div class="form-group">
                             <label for="prodi" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
                             <select class="form-control" name="kelas" required="">
+                                @foreach($kelas as $kls)
                                 <option value="{{$kls->id}}">{{$kls->kelas}}</option>
+                                @endforeach
                             </select>
                             </div>
                         </div>
-                        @endforeach
+
                         @foreach($kelas as $kls)
                         <div class="form-group">
                             <label for="tahun" class="col-md-4 control-label">Tahun Angkatan</label>

@@ -38,13 +38,13 @@ $(document).ready(function() {
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('nis') ? ' has-error' : '' }}">
                             <label for="npm" class="col-md-4 control-label">NPM</label>
                             <div class="col-md-6">
-                                <input id="npm" type="number" class="form-control" name="npm" value="{{ $data->npm }}" maxlength="8" readonly>
-                                @if ($errors->has('npm'))
+                                <input id="nis" type="number" class="form-control" name="nis" value="{{ $data->nis }}" maxlength="8" readonly>
+                                @if ($errors->has('nis'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('npm') }}</strong>
+                                        <strong>{{ $errors->first('nis') }}</strong>
                                     </span>
                                 @endif
                             </div>
