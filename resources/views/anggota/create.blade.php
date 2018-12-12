@@ -22,7 +22,7 @@ $(document).ready(function() {
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Tambah Siswa</h4>
-                      
+
                         <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
                             <label for="nama" class="col-md-4 control-label">Nama</label>
                             <div class="col-md-6">
@@ -37,15 +37,15 @@ $(document).ready(function() {
                         <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
                             <label for="npm" class="col-md-4 control-label">NIS</label>
                             <div class="col-md-6">
-                                <input id="npm" type="number" class="form-control" name="npm" value="{{ old('npm') }}" maxlength="8" required>
-                                @if ($errors->has('npm'))
+                                <input id="nis" type="number" class="form-control" name="nis" value="{{ old('nis') }}" maxlength="8" required>
+                                @if ($errors->has('nis'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('npm') }}</strong>
+                                        <strong>{{ $errors->first('nis') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                             <label for="level" class="col-md-4 control-label">Jenis Kelamin</label>
                             <div class="col-md-6">
@@ -56,19 +56,26 @@ $(document).ready(function() {
                             </select>
                             </div>
                         </div>
-
-                        <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
+                        @foreach($kelas as $kls)
+                        <div class="form-group">
                             <label for="prodi" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
-                            <select class="form-control" name="prodi" required="">
-                                <option value=""></option>
-                                <option value="TI">Teknik Informatika</option>
-                                <option value="SI">Sistem Informasi</option>
-                                <option value="KM">Kesehatan Masyarakat</option>
+                            <select class="form-control" name="kelas" required="">
+                                <option value="{{$kls->id}}">{{$kls->kelas}}</option>
                             </select>
                             </div>
                         </div>
-
+                        @endforeach
+                        @foreach($kelas as $kls)
+                        <div class="form-group">
+                            <label for="tahun" class="col-md-4 control-label">Tahun Angkatan</label>
+                            <div class="col-md-6">
+                            <select class="form-control" name="prodi" required="">
+                                <option value="{{$kls->id}}">{{$kls->tahun}}</option>
+                            </select>
+                            </div>
+                        </div>
+                        @endforeach
                         <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }} " style="margin-bottom: 20px;">
                             <label for="user_id" class="col-md-4 control-label">User Login</label>
                             <div class="col-md-6">

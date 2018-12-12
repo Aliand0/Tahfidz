@@ -22,7 +22,7 @@
                     <div class="float-right">
                       <p class="mb-0 text-right">Jam</p>
                       <div class="fluid-container">
-                       
+
                         <h3 class="font-weight-medium text-right mb-0">
                         <?php
 date_default_timezone_set('Asia/Jakarta');
@@ -51,14 +51,14 @@ $a = date ("H");?>
 		'Desember'
 	);
 	$pecahkan = explode('-', $tanggal);
-	
+
 	// variabel pecahkan 0 = tanggal
 	// variabel pecahkan 1 = bulan
 	// variabel pecahkan 2 = tahun
- 
+
 	return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
 }
- 
+
 echo tgl_indo(date('Y-m-d'));
 ?>
                   </p>
@@ -75,7 +75,7 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Kelas</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">{{$buku->count()}}</h3>
+                        <h3 class="font-weight-medium text-right mb-0">#</h3>
                       </div>
                     </div>
                   </div>
@@ -132,10 +132,10 @@ echo tgl_indo(date('Y-m-d'));
 
                 <div class="card-body">
                   <h4 class="card-title"></h4>
-                  
+
                   <div class="table-responsive">
                     <table class="table table-striped" id="table">
-                      
+
                       </tbody>
                     </table>
                   </div>

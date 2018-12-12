@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\siswa;
+use App\Anggota;
 use Carbon\Carbon;
 use Session;
 use Illuminate\Support\Facades\Redirect;
@@ -32,7 +32,7 @@ class AnggotaController extends Controller
             return redirect()->to('/');
         }
 
-        $datas = siswa::get();
+        $datas = Anggota::get();
         return view('anggota.index', compact('datas'));
     }
 
@@ -43,6 +43,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
+        $kelas = Kelas::all();
         if(Auth::user()->level == 'user') {
             Alert::info('Oopss..', 'Anda dilarang masuk ke area ini.');
             return redirect()->to('/');
@@ -50,10 +51,10 @@ class AnggotaController extends Controller
 
         $users = User::WhereNotExists(function($query) {
                         $query->select(DB::raw(1))
-                        ->from('siswa')
-                        ->whereRaw('siswa.user_id = users.id');
+                        ->from('anggota')
+                        ->whereRaw('anggota.user_id = users.id');
                      })->get();
-        return view('anggota.create', compact('users'));
+        return view('anggota.create', compact('users','kelas'));
     }
 
     /**
@@ -64,8 +65,8 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        $count = siswa::where('nis',$request->input('nis'))->count();
 
+      $count = anggota::where('nis',$request->input('nis'))->count();
         if($count>0){
             Session::flash('message', 'Already exist!');
             Session::flash('message_type', 'danger');
@@ -97,7 +98,7 @@ class AnggotaController extends Controller
                 return redirect()->to('/');
         }
 
-        $data = siswa::findOrFail($id);
+        $data = Anggota::findOrFail($id);
 
         return view('anggota.show', compact('data'));
     }
@@ -115,7 +116,7 @@ class AnggotaController extends Controller
                 return redirect()->to('/');
         }
 
-        $data = siswa::findOrFail($id);
+        $data = Anggota::findOrFail($id);
         $users = User::get();
         return view('anggota.edit', compact('data', 'users'));
     }
