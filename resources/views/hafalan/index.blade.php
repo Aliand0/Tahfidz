@@ -47,10 +47,10 @@
                           <th>
                             Nama
                           </th>
-                          <th>
+                          <th class="text-center">
                             Juz
                           </th>
-                          <th>
+                          <th class="text-center">
                             Halaman
                           </th>
                           <th>
@@ -69,13 +69,14 @@
                             {{$data->nama}}
                           </a>
                           </td>
-                          <td>
+                          <td class="text-center">
 
                             {{$data->Juz}}
 
+
                           </td>
 
-                          <td>
+                          <td class="text-center">
                             {{$data->halaman}}
                           </td>
                           <td>
