@@ -43,10 +43,10 @@ $(document).ready(function() {
                 <div class="col-12">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Tambah Buku baru</h4>
+                      <h4 class="card-title">Tambah Kelas baru</h4>
                       
                         <div class="form-group{{ $errors->has('judul') ? ' has-error' : '' }}">
-                            <label for="judul" class="col-md-4 control-label">Judul</label>
+                            <label for="judul" class="col-md-4 control-label">Nama Kelas</label>
                             <div class="col-md-6">
                                 <input id="judul" type="text" class="form-control" name="judul" value="{{ old('judul') }}" required>
                                 @if ($errors->has('judul'))
@@ -69,7 +69,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('jumlah_buku') ? ' has-error' : '' }}">
-                            <label for="jumlah_buku" class="col-md-4 control-label">Jumlah Buku</label>
+                            <label for="jumlah_buku" class="col-md-4 control-label">Jumlah Siswa</label>
                             <div class="col-md-6">
                                 <input id="jumlah_buku" type="number" maxlength="4" class="form-control" name="jumlah_buku" value="{{ old('jumlah_buku') }}" required>
                                 @if ($errors->has('jumlah_buku'))
