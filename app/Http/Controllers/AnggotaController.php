@@ -121,7 +121,7 @@ class AnggotaController extends Controller
         }
 
         $data = Anggota::findOrFail($id);
-        $data1 = kelas::findOrFail($id);
+        
         $users = User::get();
         return view('anggota.edit', compact('data', 'data1','users', 'kelas'));
     }

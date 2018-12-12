@@ -21,7 +21,7 @@
               </div>
             </div>
           </li>
-          <li class="nav-item {{ setActive(['/', 'home']) }}"> 
+          <li class="nav-item {{ setActive(['/', 'home']) }}">
             <a class="nav-link" href="{{url('/')}}">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Beranda</span>
@@ -36,7 +36,7 @@
             </a>
             <div class="collapse {{ setShow(['anggota*', 'buku*', 'user*']) }}" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                
+
                 <li class="nav-item">
                   <a class="nav-link {{ setActive(['anggota*']) }}" href="{{route('anggota.index')}}">Data Siswa</a>
                 </li>
@@ -78,5 +78,5 @@
               </ul>
             </div>
           </li>
-         
+
         </ul>
