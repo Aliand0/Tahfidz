@@ -24,27 +24,13 @@ $(document).ready(function() {
                     <div class="card-body">
                       <h4 class="card-title">Setor Hafalan</h4>
 
-                        <div class="form-group{{ $errors->has('nama') ? ' has-error' : '' }}">
-                            <label for="nama" class="col-md-4 control-label">Nama</label>
-                            <div class="col-md-6">
-                                <input id="nama" type="text" class="form-control" name="nama" value="{{ $data->nama }}" required>
-                                @if ($errors->has('nama'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('nama') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('kelas_id') ? ' has-error' : '' }}">
-                            <label for="kelas_id" class="col-md-4 control-label">Kelas</label>
-                            <div class="col-md-6">
-                              <select class="form-control" name="user_id" required="">
-                                  <option value="">(Cari User)</option>
-                                  @foreach($kelas as $kls)
-                                      <option value="{{$kls->id}}" {{$kls->id === $kls->id ? "selected" : ""}}>{{$kls->kelas}} {{$kls->tahun}}</option>
-                                  @endforeach
-                              </select>
-                            </div>
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Nama : {{ $data->nama }}</h5>
+                            @foreach($kelas as $kls)
+                            <h6 class="card-subtitle mb-2 text-muted">Kelas : {{$kls->kelas}} {{$kls->tahun}}</h6>
+                            @endforeach
+                          </div>
                         </div>
                         <div class="form-group{{ $errors->has('Juz') ? ' has-error' : '' }}">
                             <label for="Juz" class="col-md-4 control-label">Juz</label>

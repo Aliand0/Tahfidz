@@ -100,7 +100,7 @@ class HafalanController extends Controller
       Anggota::find($id)->update($request->all());
 
       alert()->success('Berhasil.','Hafalan telah diperbarui!');
-      return redirect()->to('anggota');
+      return redirect()->to('hafalan');
     }
 
     /**
