@@ -85,7 +85,7 @@ class HafalanController extends Controller
       $data = Anggota::findOrFail($id);
 
       $users = User::get();
-      return view('anggota.edit', compact('data','users', 'kelas'));
+      return view('hafalan.edit', compact('data','users', 'kelas'));
     }
 
     /**
@@ -97,7 +97,10 @@ class HafalanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      Anggota::find($id)->update($request->all());
+
+      alert()->success('Berhasil.','Hafalan telah diperbarui!');
+      return redirect()->to('anggota');
     }
 
     /**

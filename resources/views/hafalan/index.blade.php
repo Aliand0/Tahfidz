@@ -83,7 +83,7 @@
                           </td>
                           <td>
 
-                          <a class="btn btn-primary btn-sm" href="{{ route('anggota.edit', $data->id) }}" role="button">Setor hafalan</a>
+                          <a class="btn btn-primary btn-sm" href="{{ route('hafalan.edit', $data->id) }}" role="button">Setor Hafalan </a>
 
 
                           </td>
