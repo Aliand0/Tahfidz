@@ -48,6 +48,12 @@ class KelasController extends Controller
            Alert::info('Oopss..', 'Anda dilarang masuk ke area ini.');
            return redirect()->to('/');
        }
+       $users = User::WhereNotExists(function($query) {
+                       $query->select(DB::raw(1))
+                       ->from('anggota')
+                       ->whereRaw('anggota.user_id = users.id');
+                    })->get();
+       return view('kelas.create', compact('users','kelas'));
    }
 
    /**
@@ -62,7 +68,7 @@ class KelasController extends Controller
 
        $this->validate($request, [
            'kelas' => 'required|string|max:255',
-           'tahun' => 'required|integer|max:4|unique:kelas',
+           'tahun' => 'required|string|max:4|unique:kelas',
        ]);
 
        Kelas::create($request->all());
