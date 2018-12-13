@@ -65,7 +65,7 @@
                       @foreach($hafalan as $data)
                         <tr>
                           <td class="py-1">
-                          <a href="#">
+                          <a href="#" readonly>
                             {{$data->nama}}
                           </a>
                           </td>
