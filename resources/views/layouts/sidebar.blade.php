@@ -41,7 +41,7 @@
                   <a class="nav-link {{ setActive(['anggota*']) }}" href="{{route('anggota.index')}}">Data Siswa</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {{ setActive(['buku*']) }}" href="{{route('buku.index')}}">Data Kelas</a>
+                  <a class="nav-link {{ setActive(['kelas*']) }}" href="{{route('kelas.index')}}">Data Kelas</a>
                 </li>
                  <li class="nav-item">
                   <a class="nav-link {{ setActive(['user*']) }}" href="{{route('user.index')}}">Data User</a>
