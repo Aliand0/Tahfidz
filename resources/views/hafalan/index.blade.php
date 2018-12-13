@@ -14,7 +14,7 @@
 @section('content')
 <div class="row">
 
-  
+
     <div class="col-lg-12">
                   @if (Session::has('message'))
                   <div class="alert alert-{{ Session::get('message_type') }}" id="waktu2" style="margin-top:10px;">{{ Session::get('message') }}</div>
@@ -39,7 +39,7 @@
                             </select>
                             </div>
                         </div>
-                  
+
                   <div class="table-responsive">
                     <table class="table table-striped" id="table">
                       <thead>
@@ -53,7 +53,7 @@
                           <th>
                             Halaman
                           </th>
-                          
+
                           <th>
                             Action
                           </th>
@@ -63,23 +63,23 @@
                       @foreach($datas as $data)
                         <tr>
                           <td class="py-1">
-                          <a href="{{route('transaksi.show', $data->id)}}"> 
+                          <a href="#">
                             {{$data->kode_transaksi}}
                           </a>
                           </td>
                           <td>
-                          
+
                             {{$data->buku->judul}}
-                          
+
                           </td>
 
                           <td>
                             {{$data->anggota->nama}}
                           </td>
-                         
+
                           <td>
                         @if($data->status == 'pinjam')
-                        <form action="{{ route('transaksi.update', $data->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="#" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('put') }}
                             <button class="btn btn-info btn-xs" onclick="return confirm('Anda yakin data ini sudah kembali?')">Setor Hafalan
@@ -88,7 +88,7 @@
                           @else
                           -
                           @endif
-                        
+
                           </td>
                         </tr>
                       @endforeach

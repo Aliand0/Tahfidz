@@ -50,8 +50,8 @@
             </div>
           </li>
           @endif
-          <li class="nav-item {{ setActive(['transaksi*']) }}">
-            <a class="nav-link" href="{{route('transaksi.index')}}">
+          <li class="nav-item {{ setActive(['hafalan*']) }}">
+            <a class="nav-link" href="{{route('hafalan.index')}}">
               <i class="menu-icon mdi mdi-library"></i>
               <span class="menu-title">Hafalan</span>
             </a>

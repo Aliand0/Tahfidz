@@ -26,9 +26,8 @@ Route::post('/user-register', 'UserController@store');
 Route::get('/user-edit/{id}', 'UserController@edit');
 */
 Route::resource('user', 'UserController');
-
 Route::resource('anggota', 'AnggotaController');
-
+Route::resource('hafalan', 'HafalanController');
 
 Route::resource('buku', 'BukuController');
 Route::get('/format_buku', 'BukuController@format');
@@ -42,5 +41,3 @@ Route::get('/laporan/trs/excel', 'LaporanController@transaksiExcel');
 Route::get('/laporan/buku', 'LaporanController@buku');
 Route::get('/laporan/buku/pdf', 'LaporanController@bukuPdf');
 Route::get('/laporan/buku/excel', 'LaporanController@bukuExcel');
-
-
