@@ -33,7 +33,7 @@ class HomeController extends Controller
       $jmlkelas = DB::table('kelas')->count();
       $anggota   = Anggota::get();
       if(Auth::user()->level == 'user') {
-          return view('home');
+          return view('home', compact('anggota','jmlsiswa','jmlkelas'));
       }
       else{
         return view('homeAdmin', compact('anggota','jmlsiswa','jmlkelas'));

@@ -75,7 +75,7 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Kelas</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">#</h3>
+                        <h3 class="font-weight-medium text-right mb-0">{{$jmlkelas}}</h3>
                       </div>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Siswa</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">#</h3>
+                        <h3 class="font-weight-medium text-right mb-0">{{$jmlsiswa}}</h3>
                       </div>
                     </div>
                   </div>
@@ -136,28 +136,28 @@ echo tgl_indo(date('Y-m-d'));
                   <div class="table-responsive">
                     <table class="table table-striped">
                     <thead>
-                        <tr>
-                          <th><b>
-                            Nama
-                          </th>
-                          <th><b>
-                            Kelas
-                          </th>
-                          <th><b>
-                            Juz
-                          </th>
-                          <th><b>
-                            Halaman
-                          </th>
-                          <th><b>
-                            Komentar
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
+                      <tr>
+                        <th><b>
+                          Nama
+                        </th>
+                        <th><b>
+                          Kelas
+                        </th>
+                        <th><b>
+                          Juz
+                        </th>
+                        <th><b>
+                          Halaman
+                        </th>
+                        <th><b>
+                          Komentar
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
 
-                      </tbody>
-                    </table>
+                    </tbody>
+                  </table>
                     <br><br>
                     <h4 class="card-title">Info Surat Al-Qur'an</h4>
 
