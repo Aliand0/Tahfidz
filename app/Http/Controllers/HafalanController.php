@@ -76,7 +76,16 @@ class HafalanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $kelas = Kelas::all();
+      if((Auth::user()->level == 'user') && (Auth::user()->id != $id)) {
+              Alert::info('Oopss..', 'Anda dilarang masuk ke area ini.');
+              return redirect()->to('/');
+      }
+
+      $data = Anggota::findOrFail($id);
+
+      $users = User::get();
+      return view('anggota.edit', compact('data','users', 'kelas'));
     }
 
     /**

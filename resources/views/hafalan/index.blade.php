@@ -83,12 +83,7 @@
                           </td>
                           <td>
 
-                        <form action="#" method="post" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('put') }}
-                            <button class="btn btn-info btn-xs" onclick="return confirm('Anda yakin data ini sudah kembali?')">Setor Hafalan
-                            </button>
-                          </form>
+                          <a class="btn btn-primary btn-sm" href="{{ route('anggota.edit', $data->id) }}" role="button">Setor hafalan</a>
 
 
                           </td>
