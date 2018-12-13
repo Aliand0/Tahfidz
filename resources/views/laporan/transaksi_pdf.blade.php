@@ -12,7 +12,7 @@
     background: #404853;
     background: linear-gradient(#687587, #404853);
     border-left: 1px solid rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
     color: #fff;
     padding: 8px;
     text-align: left;
@@ -35,10 +35,10 @@
     border-left: 1px solid #c6c9cc;
     }
     tr:first-child td {
-    border-top: 0;
+    border-top: #0000;
     }
     tr:nth-child(even) td {
-    background: #e8eae9;
+    background: #ffff;
     }
     tr:last-child td:first-child {
     border-bottom-left-radius: 4px;
@@ -85,27 +85,23 @@
 </head>
 <body>
 <h1 class="center">LAPORAN DATA HAFALAN</h1>
+<h4 class="left">Kelas :</h4>
  <table id="pseudo-demo">
                       <thead>
                         <tr>
                           <th>
-                            Kode
+                            no
                           </th>
                           <th>
-                            Buku
+                            nama
                           </th>
                           <th>
-                            Peminjam
+                            Juz
                           </th>
                           <th>
-                            Tgl Pinjam
+                            Halaman
                           </th>
-                          <th>
-                            Tgl Kembali
-                          </th>
-                          <th>
-                            Status
-                          </th>
+
                         </tr>
                       </thead>
                       <tbody>
@@ -121,13 +117,7 @@
                           <td>
 
                           </td>
-                          <td>
-
-                          </td>
-                          <td>
-
-                          </td>
-                          <td>
+													<td>
 
                           </td>
                         </tr>
