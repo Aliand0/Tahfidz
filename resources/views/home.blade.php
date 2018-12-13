@@ -25,10 +25,10 @@
 
                         <h3 class="font-weight-medium text-right mb-0">
                         <?php
-date_default_timezone_set('Asia/Jakarta');
-$jam=date("H:i");
-echo  $jam." "."</b>";
-$a = date ("H");?>
+                          date_default_timezone_set('Asia/Jakarta');
+                          $jam=date("H:i");
+                          echo  $jam." "."</b>";
+                          $a = date ("H");?>
                         </h3>
                       </div>
                     </div>
@@ -95,7 +95,7 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Guru</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">{{$anggota->where('user_id','1')->count()}}</h3>
+                        <h3 class="font-weight-medium text-right mb-0">#</h3>
                       </div>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Siswa</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">{{$anggota->where('user_id','1')->count()}}</h3>
+                        <h3 class="font-weight-medium text-right mb-0">#</h3>
                       </div>
                     </div>
                   </div>
@@ -155,21 +155,21 @@ echo tgl_indo(date('Y-m-d'));
                         </tr>
                       </thead>
                       <tbody>
-                     
+
                       </tbody>
                     </table>
                     <br><br>
                     <h4 class="card-title">Info Surat Al-Qur'an</h4>
-               
+
                     <table class="table table-striped">
- 
+
     <thead>
       <tr>
         <th scope="col"><b>Juz</th>
         <th scope="col"><b>Surat</th>
         <th scope="col"><b>Juz</th>
         <th scope="col"><b>Surat</th>
-      
+
       </tr>
     </thead>
     <tbody>
@@ -263,7 +263,7 @@ echo tgl_indo(date('Y-m-d'));
         <td>30</td>
         <td>An Naba' 1</td>
       </tr>
-    
+
     </tbody>
   </table>
                   </div>

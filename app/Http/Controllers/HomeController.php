@@ -28,8 +28,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $anggota   = Anggota::get();
-
-        return view('home', compact('anggota'));
+      $anggota   = Anggota::get();
+      if(Auth::user()->level == 'user') {
+          return view('home');
+      }
+      else{
+        return view('homeAdmin', compact('anggota'));
+      }
     }
 }

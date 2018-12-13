@@ -135,16 +135,16 @@ echo tgl_indo(date('Y-m-d'));
 
                     <br><br>
                     <h4 class="card-title">Info Surat Al-Qur'an</h4>
-               
+
                     <table class="table table-striped">
- 
+
     <thead>
       <tr>
         <th scope="col"><b>Juz</th>
         <th scope="col"><b>Surat</th>
         <th scope="col"><b>Juz</th>
         <th scope="col"><b>Surat</th>
-      
+
       </tr>
     </thead>
     <tbody>
@@ -238,9 +238,10 @@ echo tgl_indo(date('Y-m-d'));
         <td>30</td>
         <td>An Naba' 1</td>
       </tr>
-    
+
     </tbody>
   </table>
+</div>
                   </div>
                 </div>
               </div>
