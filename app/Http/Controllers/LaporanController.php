@@ -35,30 +35,30 @@ class LaporanController extends Controller
     }
 
 
-    // public function transaksiPdf(Request $request)
-    // {
-    //     $q = Anggota::query();
-    //
-    //     if($request->get('status'))
-    //     {
-    //          if($request->get('status') == 'pinjam') {
-    //             $q->where('status', 'pinjam');
-    //         } else {
-    //             $q->where('status', 'kembali');
-    //         }
-    //     }
-    //
-    //     if(Auth::user()->level == 'user')
-    //     {
-    //         $q->where('anggota_id', Auth::user()->anggota->id);
-    //     }
-    //
-    //     $datas = $q->get();
-    //
-    //    // return view('laporan.transaksi_pdf', compact('datas'));
-    //    $pdf = PDF::loadView('laporan.transaksi_pdf', compact('datas'));
-    //    return $pdf->download('laporan_transaksi_'.date('Y-m-d_H-i-s').'.pdf');
-    // }
+    public function transaksiPdf(Request $request)
+    {
+        $q = Anggota::query();
+
+        if($request->get('status'))
+        {
+             if($request->get('status') == 'pinjam') {
+                $q->where('status', 'pinjam');
+            } else {
+                $q->where('status', 'kembali');
+            }
+        }
+
+        if(Auth::user()->level == 'user')
+        {
+            $q->where('anggota_id', Auth::user()->anggota->id);
+        }
+
+        $datas = $q->get();
+
+       // return view('laporan.transaksi_pdf', compact('datas'));
+       $pdf = PDF::loadView('laporan.transaksi_pdf', compact('datas'));
+       return $pdf->download('laporan_transaksi_'.date('Y-m-d_H-i-s').'.pdf');
+    }
 
 
     public function transaksiExcel(Request $request)

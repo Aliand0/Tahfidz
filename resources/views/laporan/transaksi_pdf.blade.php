@@ -81,10 +81,10 @@
     background-color: #009b4e; }
 	</style>
   <link rel="stylesheet" href="">
-	<title>Laporan Data Transaksi</title>
+	<title>Laporan Data Hafalan</title>
 </head>
 <body>
-<h1 class="center">LAPORAN DATA TRANSAKSI</h1>
+<h1 class="center">LAPORAN DATA HAFALAN</h1>
  <table id="pseudo-demo">
                       <thead>
                         <tr>
@@ -112,29 +112,23 @@
                       @foreach($datas as $data)
                        <tr>
                           <td class="py-1">
-                            {{$data->kode_transaksi}}
+
                           </td>
                           <td>
-                          
-                            {{$data->buku->judul}}
-                          
+
                           </td>
 
                           <td>
-                            {{$data->anggota->nama}}
+
                           </td>
                           <td>
-                           {{date('d/m/y', strtotime($data->tgl_pinjam))}}
+
                           </td>
                           <td>
-                            {{date('d/m/y', strtotime($data->tgl_kembali))}}
+
                           </td>
                           <td>
-                          @if($data->status == 'pinjam')
-                            <label class="badge badge-warning">Pinjam</label>
-                          @else
-                            <label class="badge badge-success">Kembali</label>
-                          @endif
+
                           </td>
                         </tr>
                       @endforeach
