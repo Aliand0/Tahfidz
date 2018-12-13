@@ -49,7 +49,7 @@
               </ul>
             </div>
           </li>
-          @endif
+
           <li class="nav-item {{ setActive(['hafalan*']) }}">
             <a class="nav-link" href="{{route('hafalan.index')}}">
               <i class="menu-icon mdi mdi-library"></i>
@@ -78,5 +78,5 @@
               </ul>
             </div>
           </li>
-
+          @endif
         </ul>

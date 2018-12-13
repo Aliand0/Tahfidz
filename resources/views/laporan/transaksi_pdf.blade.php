@@ -99,7 +99,7 @@
                             Juz
                           </th>
                           <th>
-                            Halaman
+                            Halaman Surah
                           </th>
 
                         </tr>
@@ -111,14 +111,14 @@
 
                           </td>
                           <td>
-
+														{{$data->nama}}
                           </td>
 
                           <td>
-
+														{{$data->Juz}}
                           </td>
 													<td>
-
+														{{$data->halaman}}
                           </td>
                         </tr>
                       @endforeach

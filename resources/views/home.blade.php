@@ -139,6 +139,7 @@ echo tgl_indo(date('Y-m-d'));
                       <tr>
                         <th><b>
                           Nama
+
                         </th>
                         <th><b>
                           Kelas
@@ -155,7 +156,7 @@ echo tgl_indo(date('Y-m-d'));
                       </tr>
                     </thead>
                     <tbody>
-
+                      
                     </tbody>
                   </table>
                     <br><br>
