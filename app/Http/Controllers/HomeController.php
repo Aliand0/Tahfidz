@@ -7,6 +7,7 @@ use App\Transaksi;
 use App\Anggota;
 use App\Buku;
 use Auth;
+use DB;
 
 
 class HomeController extends Controller
@@ -28,12 +29,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+      $jmlsiswa = DB::table('anggota')->count();
+      $jmlkelas = DB::table('kelas')->count();
       $anggota   = Anggota::get();
       if(Auth::user()->level == 'user') {
           return view('home');
       }
       else{
-        return view('homeAdmin', compact('anggota'));
+        return view('homeAdmin', compact('anggota','jmlsiswa','jmlkelas'));
       }
     }
 }
