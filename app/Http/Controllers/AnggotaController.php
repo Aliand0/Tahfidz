@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\kelas;
+use App\hafalan;
 use App\Anggota;
 use Carbon\Carbon;
 use Session;
@@ -66,7 +67,6 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-
       $count = anggota::where('nis',$request->input('nis'))->count();
         if($count>0){
             Session::flash('message', 'Already exist!');
@@ -82,7 +82,6 @@ class AnggotaController extends Controller
         ]);
 
         Anggota::create($request->all());
-
         alert()->success('Berhasil.','Data telah ditambahkan!');
         return redirect()->route('anggota.index');
 

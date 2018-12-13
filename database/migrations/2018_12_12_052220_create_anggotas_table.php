@@ -22,6 +22,10 @@ class CreateAnggotasTable extends Migration
           $table->enum('jk', ['L', 'P']);
           $table->integer('kelas_id')->unsigned();
           $table->foreign('kelas_id')->references('id')->on('kelas')->onDelete('CASCADE');
+          $table->integer('Juz')->default(1);
+          $table->integer('halaman')->default(1);
+          $table->integer('count')->default(0);
+          $table->string('komentar')->nullable();
           $table->timestamps();
         });
     }

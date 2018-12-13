@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\User;
 use App\kelas;
 use App\Anggota;
-use App\hafalan;
 use Carbon\Carbon;
 use Session;
 use Illuminate\Support\Facades\Redirect;
@@ -32,7 +31,8 @@ class HafalanController extends Controller
           return redirect()->to('/');
       }
       $kelas = Kelas::all();
-      $hafalan = hafalan::get();
+      $hafalan = Anggota::get();
+
       return view('hafalan.index', compact('hafalan','kelas'));
     }
 

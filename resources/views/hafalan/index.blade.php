@@ -53,41 +53,43 @@
                           <th>
                             Halaman
                           </th>
-
+                          <th>
+                            Komentar
+                          </th>
                           <th>
                             Action
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                      @foreach($datas as $data)
+                      @foreach($hafalan as $data)
                         <tr>
                           <td class="py-1">
                           <a href="#">
-                            {{$data->kode_transaksi}}
+                            {{$data->nama}}
                           </a>
                           </td>
                           <td>
 
-                            {{$data->buku->judul}}
+                            {{$data->Juz}}
 
                           </td>
 
                           <td>
-                            {{$data->anggota->nama}}
+                            {{$data->halaman}}
                           </td>
-
                           <td>
-                        @if($data->status == 'pinjam')
+                            {{$data->komentar}}
+                          </td>
+                          <td>
+
                         <form action="#" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('put') }}
                             <button class="btn btn-info btn-xs" onclick="return confirm('Anda yakin data ini sudah kembali?')">Setor Hafalan
                             </button>
                           </form>
-                          @else
-                          -
-                          @endif
+
 
                           </td>
                         </tr>
