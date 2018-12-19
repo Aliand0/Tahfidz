@@ -31,10 +31,11 @@
                   <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                             <label for="level" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
-                            <select class="form-control" name="kelas_id" required="">
-                              @foreach($kelas as $kls)
-                              <option value="{{$kls->id}}">{{$kls->kelas}} {{$kls->tahun}}</option>
-                              @endforeach
+                            <select class="form-control" name="level" required="">
+                                <option value=""></option>
+                                <option value="admin">Admin</option>
+                                <option value="guru">Guru</option>
+                                <option value="user">User</option>
                             </select>
                             </div>
                         </div>
@@ -45,9 +46,6 @@
                         <tr>
                           <th>
                             Nama
-                          </th>
-                          <th>
-                            Kelas
                           </th>
                           <th class="text-center">
                             Juz
@@ -67,18 +65,9 @@
                       @foreach($hafalan as $data)
                         <tr>
                           <td class="py-1">
-                          <p readonly>
+                          <a href="#" readonly>
                             {{$data->nama}}
-                          </p>
-                          </td>
-                          <td class="py-1">
-                          <p readonly value="{{$kls->id}}">
-                                @foreach($kelas as $kls)
-                                  @if($data->kelas_id == $kls->id)
-                                    {{$kls->kelas}} {{$kls->tahun}}
-                                  @endif
-                                @endforeach
-                          </p>
+                          </a>
                           </td>
                           <td class="text-center">
 

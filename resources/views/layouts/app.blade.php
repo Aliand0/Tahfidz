@@ -40,7 +40,7 @@
 
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-right">
-         
+
           <li class="nav-item dropdown d-xl-inline-block">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <span class="profile-text">Assalamu'alaikum, {{Auth::user()->name}} </span>
@@ -53,7 +53,7 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <a class="dropdown-item p-0">
                 <div class="d-flex border-bottom">
-                 
+
                 </div>
               </a>
               <a class="dropdown-item" style="margin-top: 20px;" href="{{route('user.edit', Auth::user()->id)}}">
@@ -69,7 +69,7 @@
             </div>
           </li>
         </ul>
-     
+
       </div>
     </nav>
     <!-- partial -->
@@ -106,6 +106,7 @@
   <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
   <script src="{{asset('js/sweetalert2.all.js')}}"></script>
   <script src="{{asset('js/select2.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   @include('sweetalert::alert')
   @section('js')
 
@@ -113,5 +114,3 @@
 </body>
 
 </html>
-                         
-   

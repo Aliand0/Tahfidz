@@ -11,6 +11,7 @@
 @extends('layouts.app')
 
 @section('content')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <div class="row">
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
             <div class="card card-statistics">
@@ -25,10 +26,10 @@
 
                         <h3 class="font-weight-medium text-right mb-0">
                         <?php
-date_default_timezone_set('Asia/Jakarta');
-$jam=date("H:i");
-echo  $jam." "."</b>";
-$a = date ("H");?>
+                          date_default_timezone_set('Asia/Jakarta');
+                          $jam=date("H:i");
+                          echo  $jam." "."</b>";
+                          $a = date ("H");?>
                         </h3>
                       </div>
                     </div>
@@ -122,8 +123,47 @@ echo tgl_indo(date('Y-m-d'));
               <div class="card">
 
                 <div class="card-body">
-                  <h4 class="card-title">Data Grafik</h4>
-
+                  <h4 class="card-title">Grafik Hafalan Siswa Perkelas</h4>
+                  <canvas id="myChart" width="400" height="100"></canvas>
+                    <script>
+                    var ctx = document.getElementById("myChart");
+                    var myChart = new Chart(ctx, {
+                      type: 'bar',
+                      data: {
+                          labels: ["!0 Mipa 1", "10 Mipa 2", "11 Mipa 1", "11 Mipa 2", "12 Mipa 1", "12 Mipa 2"],
+                          datasets: [{
+                              label: '# of Votes',
+                              data: [12, 19, 3, 5, 2, 3],
+                              backgroundColor: [
+                                  'rgba(255, 99, 132, 0.2)',
+                                  'rgba(54, 162, 235, 0.2)',
+                                  'rgba(255, 206, 86, 0.2)',
+                                  'rgba(75, 192, 192, 0.2)',
+                                  'rgba(153, 102, 255, 0.2)',
+                                  'rgba(255, 159, 64, 0.2)'
+                              ],
+                              borderColor: [
+                                  'rgba(255,99,132,1)',
+                                  'rgba(54, 162, 235, 1)',
+                                  'rgba(255, 206, 86, 1)',
+                                  'rgba(75, 192, 192, 1)',
+                                  'rgba(153, 102, 255, 1)',
+                                  'rgba(255, 159, 64, 1)'
+                              ],
+                              borderWidth: 1
+                          }]
+                      },
+                      options: {
+                          scales: {
+                              yAxes: [{
+                                  ticks: {
+                                      beginAtZero:true
+                                  }
+                              }]
+                          }
+                      }
+                    });
+                    </script>
                     <br><br>
                     <h4 class="card-title">Info Surat Al-Qur'an</h4>
 
