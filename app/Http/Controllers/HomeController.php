@@ -30,14 +30,16 @@ class HomeController extends Controller
     public function index()
     {
       $jmlsiswa = DB::table('anggota')->count();
+      $jmlguru = DB::table('users')->where('level','admin')->count();
       $jmlkelas = DB::table('kelas')->count();
-      // $anggota   = Anggota::get();
       $anggota   = DB::table('anggota')->get();
+      $kelas = DB::table('kelas')->get();
+
       if(Auth::user()->level == 'user') {
-          return view('home', compact('anggota','jmlsiswa','jmlkelas'));
+          return view('home', compact('anggota','jmlsiswa','jmlkelas','jmlguru','kelas'));
       }
       else{
-        return view('homeAdmin', compact('anggota','jmlsiswa','jmlkelas'));
+        return view('homeAdmin', compact('anggota','jmlsiswa','jmlkelas','jmlguru'));
       }
     }
 }

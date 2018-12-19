@@ -75,13 +75,20 @@ echo tgl_indo(date('Y-m-d'));
                     <div class="float-right">
                       <p class="mb-0 text-right">Kelas</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">{{$jmlkelas}}</h3>
+                        <h3 class="font-weight-medium text-right mb-0">
+                          @foreach($anggota as $angg)
+                            @if($angg->user_id == Auth::id())
+                              @foreach($kelas as $kls)
+                                @if($angg->kelas_id == $kls->id)
+                                <h3 class="font-weight-medium text-right mb-0" value="{{$kls->id}}">{{$kls->kelas}}</h3>
+                                @endif
+                              @endforeach
+                            @endif
+                          @endforeach
+                        </h3>
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
-                    <i class="mdi mdi-home mr-1" aria-hidden="true"></i> Total Kelas
-                  </p>
                 </div>
               </div>
             </div>
@@ -93,15 +100,22 @@ echo tgl_indo(date('Y-m-d'));
                     <i class="mdi mdi-home-account text-info icon-lg"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Guru</p>
+                      <p class="mb-0 text-right">Tahun Angkatan</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">#</h3>
+                        <h3 class="font-weight-medium text-right mb-0">
+                          @foreach($anggota as $angg)
+                            @if($angg->user_id == Auth::id())
+                              @foreach($kelas as $kls)
+                                @if($angg->kelas_id == $kls->id)
+                                <h3 class="font-weight-medium text-right mb-0" value="{{$kls->id}}">{{$kls->tahun}}</h3>
+                                @endif
+                              @endforeach
+                            @endif
+                          @endforeach
+                        </h3>
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
-                  <i class="mdi mdi-home-account mr-1" aria-hidden="true"></i> Total Guru
-                  </p>
                 </div>
               </div>
             </div>
@@ -113,15 +127,12 @@ echo tgl_indo(date('Y-m-d'));
                       <i class="mdi mdi-account-location text-info icon-lg"></i>
                     </div>
                     <div class="float-right">
-                      <p class="mb-0 text-right">Siswa</p>
+                      <p class="mb-0 text-right">Level</p>
                       <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0">{{$jmlsiswa}}</h3>
+                        <h3 class="font-weight-medium text-right mb-0">User</h3>
                       </div>
                     </div>
                   </div>
-                  <p class="text-muted mt-3 mb-0">
-                    <i class="mdi mdi-account mr-1" aria-hidden="true"></i> Total Siswa
-                  </p>
                 </div>
               </div>
             </div>
@@ -137,20 +148,16 @@ echo tgl_indo(date('Y-m-d'));
                     <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th><b>
+                        <th class="text-left"><b>
                           Nama
-
                         </th>
-                        <th><b>
-                          Kelas
-                        </th>
-                        <th><b>
+                        <th class="text-center"><b>
                           Juz
                         </th>
-                        <th><b>
-                          Halaman
+                        <th class="text-center"><b>
+                          Halaman surah
                         </th>
-                        <th><b>
+                        <th class="text-left"><b>
                           Komentar
                         </th>
                       </tr>
@@ -159,19 +166,16 @@ echo tgl_indo(date('Y-m-d'));
                       @foreach($anggota as $angg)
                       @if($angg->user_id == Auth::id())
                       <tr>
-                        <td>
+                        <td class="text-left">
                           {{ $angg->nama }}
                         </td>
-                        <td>
-                          {{ $angg->kelas_id }}
-                        </td>
-                        <td>
+                        <td class="text-center">
                           {{ $angg->Juz }}
                         </td>
-                        <td>
+                        <td class="text-center">
                           {{ $angg->halaman }}
                         </td>
-                        <td>
+                        <td class="text-left">
                           {{ $angg->komentar }}
                         </td>
 
