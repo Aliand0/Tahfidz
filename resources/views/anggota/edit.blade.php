@@ -61,7 +61,7 @@ $(document).ready(function() {
                         <div class="form-group{{ $errors->has('kelas_id') ? ' has-error' : '' }}">
                             <label for="kelas_id" class="col-md-4 control-label">Kelas</label>
                             <div class="col-md-6">
-                              <select class="form-control" name="user_id" required="">
+                              <select class="form-control" name="kelas_id" required="">
                                   <option value="">(Cari User)</option>
                                   @foreach($kelas as $kls)
                                       <option value="{{$kls->id}}" {{$kls->id === $kls->id ? "selected" : ""}}>{{$kls->kelas}} {{$kls->tahun}}</option>

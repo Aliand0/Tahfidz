@@ -130,10 +130,10 @@ echo tgl_indo(date('Y-m-d'));
                     var myChart = new Chart(ctx, {
                       type: 'bar',
                       data: {
-                          labels: ["!0 Mipa 1", "10 Mipa 2", "11 Mipa 1", "11 Mipa 2", "12 Mipa 1", "12 Mipa 2"],
+                          labels: ["!0 Boarding", "10 non-Boarding", "11 Boarding", "11 non-Boarding", "12 Boarding", "12 non-Boarding"],
                           datasets: [{
                               label: '# of Votes',
-                              data: [12, 19, 3, 5, 2, 3],
+                              data: [{{$A_fix}}, {{$B_fix}}, {{$C_fix}}, {{$D_fix}}, {{$E_fix}}, {{$F_fix}}],
                               backgroundColor: [
                                   'rgba(255, 99, 132, 0.2)',
                                   'rgba(54, 162, 235, 0.2)',

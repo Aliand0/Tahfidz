@@ -22,8 +22,8 @@
                   @endif
                   </div>
 </div>
-<div class="row" style="margin-top: 20px;">
-<div class="col-lg-12 grid-margin stretch-card">
+          <div class="row" style="margin-top: 20px;">
+          <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
 
                 <div class="card-body">
@@ -41,6 +41,9 @@
                           </th>
                           <th>
                             Kelas
+                          </th>
+                          <th>
+                            Tahun angkatan
                           </th>
                           <th>
                             Jenis Kelamin
@@ -63,13 +66,18 @@
                           </td>
 
                           <td>
-                          @if($data->kelas_id == 1)
-                            10 Mipa 1
-                          @elseif($data->prodi == 2)
-                            10 Mipa 2
-                          @else
-                            10 Mipa 3
-                          @endif
+                            @foreach($kelas as $kls)
+                              @if($data->kelas_id == $kls->id)
+                                {{$kls->kelas}}
+                              @endif
+                            @endforeach
+                          </td>
+                          <td>
+                            @foreach($kelas as $kls)
+                              @if($data->kelas_id == $kls->id)
+                                {{$kls->tahun}}
+                              @endif
+                            @endforeach
                           </td>
                           <td>
                             {{$data->jk === "L" ? "Laki - Laki" : "Perempuan"}}

@@ -72,9 +72,6 @@
                   <a class="nav-link" href="">Laporan Anggota</a>
                 </li>
                 -->
-                 <li class="nav-item">
-                  <a class="nav-link" href="{{url('laporan/buku')}}">Grafik</a>
-                </li>
               </ul>
             </div>
           </li>

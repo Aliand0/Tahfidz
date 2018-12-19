@@ -80,7 +80,7 @@ echo tgl_indo(date('Y-m-d'));
                             @if($angg->user_id == Auth::id())
                               @foreach($kelas as $kls)
                                 @if($angg->kelas_id == $kls->id)
-                                <h3 class="font-weight-medium text-right mb-0" value="{{$kls->id}}">{{$kls->kelas}}</h3>
+                                <h4 class="font-weight-medium text-right mb-0" value="{{$kls->id}}">{{$kls->kelas}}</h4>
                                 @endif
                               @endforeach
                             @endif

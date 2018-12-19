@@ -27,9 +27,7 @@ $(document).ready(function() {
                         <div class="card" style="width: 18rem;">
                           <div class="card-body">
                             <h5 class="card-title">Nama : {{ $data->nama }}</h5>
-                            @foreach($kelas as $kls)
-                            <h6 class="card-subtitle mb-2 text-muted">Kelas : {{$kls->kelas}} {{$kls->tahun}}</h6>
-                            @endforeach
+                            
                           </div>
                         </div>
                         <div class="form-group{{ $errors->has('Juz') ? ' has-error' : '' }}">
@@ -58,12 +56,7 @@ $(document).ready(function() {
                         <div class="form-group{{ $errors->has('komentar') ? ' has-error' : '' }}">
                             <label for="komentar" class="col-md-4 control-label">komentar</label>
                             <div class="col-md-6">
-                                <input id="komentar" type="text" class="form-control" name="komentar" value="{{ $data->komentar }}" required>
-                                @if ($errors->has('komentar'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('komentar') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="komentar" type="text" class="form-control" name="komentar" value="{{ $data->komentar }}">
                             </div>
                         </div>
 

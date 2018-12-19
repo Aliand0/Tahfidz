@@ -56,9 +56,9 @@
 
                 </div>
               </a>
-              <a class="dropdown-item" style="margin-top: 20px;" href="{{route('user.edit', Auth::user()->id)}}">
+              <!-- <a class="dropdown-item" style="margin-top: 20px;" href="{{route('user.edit', Auth::user()->id)}}">
                Ubah Profil
-              </a>
+              </a> -->
               <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
               Keluar

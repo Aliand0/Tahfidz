@@ -35,7 +35,8 @@ class AnggotaController extends Controller
         }
 
         $datas = Anggota::get();
-        return view('anggota.index', compact('datas'));
+        $kelas = kelas::get();
+        return view('anggota.index', compact('datas','kelas'));
     }
 
     /**
