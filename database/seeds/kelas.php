@@ -14,7 +14,27 @@ class kelas extends Seeder
       \App\Kelas::insert([
            [
              'kelas' => '10 mipa 1',
-             'tahun' => '2019'
+             'tahun' => '2018'
+           ],
+           [
+             'kelas' => '10 mipa 2',
+             'tahun' => '2018'
+           ],
+           [
+             'kelas' => '11 mipa 1',
+             'tahun' => '2018'
+           ],
+           [
+             'kelas' => '11 mipa 2',
+             'tahun' => '2018'
+           ],
+           [
+             'kelas' => '12 mipa 1',
+             'tahun' => '2018'
+           ],
+           [
+             'kelas' => '12 mipa 2',
+             'tahun' => '2018'
            ]
        ]);
     }
