@@ -156,7 +156,28 @@ echo tgl_indo(date('Y-m-d'));
                       </tr>
                     </thead>
                     <tbody>
-                      
+                      @foreach($anggota as $angg)
+                      @if($angg->user_id == Auth::id())
+                      <tr>
+                        <td>
+                          {{ $angg->nama }}
+                        </td>
+                        <td>
+                          {{ $angg->kelas_id }}
+                        </td>
+                        <td>
+                          {{ $angg->Juz }}
+                        </td>
+                        <td>
+                          {{ $angg->halaman }}
+                        </td>
+                        <td>
+                          {{ $angg->komentar }}
+                        </td>
+
+                      </tr>
+                      @endif
+                      @endforeach
                     </tbody>
                   </table>
                     <br><br>
